@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System Converter</title>
+</head>
+<body>
+    <h1>Number System Converter</h1>
+    <form action="/convert" method="post">
+        <input type="number" name="decimal" placeholder="Enter decimal number" autocomplete="off"/>
+        <input type="submit" value="Convert" />
+    </form>
+
+    <br /> <br />
+    <table border = 1>
+        {% for key, val in conversions.items() %}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ val }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
